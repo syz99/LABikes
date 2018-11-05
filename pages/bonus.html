@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>L.A. Bike Sharing Analytics</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://11ka1d3b35pv1aah0c3m9ced-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/cropped-metro-bike-share-favicon-1.png">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="index.html" style="font-size: 25px">LOS ANGELES BIKE SHARING ANALYTICS</a>
+                <img width="35px" style="padding-top: 7px;" src="https://11ka1d3b35pv1aah0c3m9ced-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/cropped-metro-bike-share-favicon-1.png">
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                     <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="http://samuelzhang.me" target="_blank">
+                                <div>
+                                    <strong>Samuel Zhang</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Just Now</em>
+                                    </span>
+                                </div>
+                                <div>Hello! I hope you find this web app fairly easy to navigate through!</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://samuelzhang.me" target="_blank">
+                                <div>
+                                    <strong>Samuel Zhang</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Most of what I've made was done using Bootstrap, JavaScript, and Tableau software.</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://samuelzhang.me" target="_blank">
+                                <div>
+                                    <strong>Samuel Zhang</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>November 3, 2018</em>
+                                    </span>
+                                </div>
+                                <div>Thanks to Capital One for the cool project!</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="/pages/question1.html">
+                                <div>
+                                    <p>
+                                        <strong>Question 1</strong>
+                                        <span class="pull-right text-muted">Level of Fun</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                            <span class="sr-only">85% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/page/question2.html">
+                                <div>
+                                    <p>
+                                        <strong>Question 2</strong>
+                                        <span class="pull-right text-muted">Level Of Fun</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/pages/question3.html">
+                                <div>
+                                    <p>
+                                        <strong>Question 3</strong>
+                                        <span class="pull-right text-muted">Level of Fun</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                                            <span class="sr-only">95% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/pages/question4.html">
+                                <div>
+                                    <p>
+                                        <strong>Question 4</strong>
+                                        <span class="pull-right text-muted">Level of Fun</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+                                            <span class="sr-only">65% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="https://www.capitalone.com" target="_blank"><i class="fa fa-user fa-fw"></i> User: capOne1988</a>
+                        </li>
+                        <li><a onclick="alert('Sorry, Sam cannot let you change any settings.')"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div style="color:white">
+                                Menu:
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a style="background-color:#EEEEEE; color:#245269" href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts, Metrics, & Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="question1.html">Question 1</a>
+                                </li>
+                                <li>
+                                    <a href="question2.html">Question 2</a>
+                                </li>
+                                <li>
+                                    <a href="question3.html">Question 3</a>
+                                </li>
+                                <li>
+                                    <a href="question4.html">Question 4</a>
+                                </li> 
+                                <li>
+                                    <a style="background-color:#EEEEEE; color:#245269" href="bonus.html">Bonus Insights</a>
+                                </li> 
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="rawdata.html"><i class="fa fa-table fa-fw"></i> Raw Data + Full Citations</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+                <div class="col-lg-12">
+                    <h1 style="color: green" class="page-header">Bonus Insights</h1>
+                </div>
+
+            <div class="col-lg-12">
+                <h3><u>Bonus 1: Are Certain Trip Route - Passholder Combinations More Popular?</u></h3>
+            </div>
+                <div style="padding-left: 200px;">
+                    <!-- Tableau Visual b1 -->
+                    <div><div class='tableauPlaceholder' id='viz1541403187034' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;4Q&#47;4Q4FC3WDF&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;4Q4FC3WDF' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;4Q&#47;4Q4FC3WDF&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1541403187034');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='85%';vizElement.style.height=(divElement.offsetWidth*0.35)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+                    <br><br>
+                    <!-- Tableau Visual b1-1 -->
+                    <div><div class='tableauPlaceholder' id='viz1541403221209' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;bonus1-1&#47;Bonus1-1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='bonus1-1&#47;Bonus1-1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;bonus1-1&#47;Bonus1-1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1541403221209');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='85%';vizElement.style.height=(divElement.offsetWidth*0.35)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+                </div>
+                    <div><i><h4>
+                        Immediately observing the magnitudes from the first graphic, we see that
+                        <b style="color: green">the One Way - Monthly Pass combinations are the most popular
+                        trip combination at 77,532 rides.</b><br><br>
+                        Further, the second graphic gives us a better understanding of the distribution of combinations.
+                        <b style="color: green">More than half of trip combination sare One Way - Monthly Pass combinations</b>, followed second
+                        by a relatively much smaller 24.75% of trip combinations coming from One Way - Walk-up combinations.<br><br>
+                        In thinking about bike sharing, this comes at a bit of a surprise, as typically one may hypothesize that
+                        either One Way - Walk-up or Round Trip - Walk-up would be the most popular. This could be explained by the
+                        fact that L.A. is a bustling city, and thus many "regular commuters" (as explored in <a style="color: blue" href="question4.html">
+                        question 4</a>) rely on bike sharing as a means of commute to work.<br><br>
+                        Even excluding the massive 58.55% of One Way - Monthly Pass trip combinations, One Way combinations
+                        still make up 22.15% more trips as compared to Round Trip combinations (31.8% vs. 9.65%).
+                    </h4></i></div>
+
+            <div class="col-lg-12">
+                <h3><u>Bonus 2: How Does Potential Gentrification (from Socioeconomic Factors) Affect Bike Usage</u></h3>
+            </div>
+                <div class="col-lg-12">
+                    We map bike stations by location against a layer of socioeconomic data to see if there is
+                    any correlation:
+                    <div><div class='tableauPlaceholder' id='viz1541405089150' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;bonus2_0&#47;Bonus2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='bonus2_0&#47;Bonus2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;bonus2_0&#47;Bonus2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1541405089150');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+                    <div><i><h4><br>
+                        Initially, a map of stations with a layer of 2018 Per Capita Income by Zipcode was created. Zooming
+                        into a larger cluster of bikeshares, there was an interesting plot of lower Per Capita Income peeking
+                        out of the large cluster of bike stations as seen below:<br><br>
+                        <img style="padding-left: 125px" width="800px" height="500px" src="../img/zipcode.png">
+                        <br><br>
+                        The layer was then changed to Per Capita Income by Block which is more specific (since the Per 
+                        Capita by Zipcode could cover up niche gentrification). The map was zoomed into a bit more as well:<br><br>
+                        <img style="padding-left: 125px" width="800px" height="550px" src="../img/block.png">
+                        <br><br>
+                        Now it becomes even more apparent that stations and bike usage almost seem to be largely clustered
+                        in green-colored havens of higher Per Capita Income areas, possibly explained by more touristry areas, which explains
+                        the immediate gentrification, and thus lower Per Capita Income seen right outside of the bubble.
+                        A simple Google image search for "Olympic Boulevard Los Angeles" (one of the street names on the above image)
+                        reveals images of a large dense city, only confirming our hypothesis of potential gentrification around areas of
+                        high bikeshare stations.
+                        <b style="color: green">This would be a fascinating topic for L.A. Bikeshare Metro to explore in terms of 
+                        addressing ethical dilemmas and advancing social good initiatives.</b><br><br>
+                    </h4></i></div>
+                </div>
+            <div class="col-lg-12">
+                <h3><u>Bonus 3: How Does Occupation Level (White vs. Blue Collar) Affect Bikeshare Station Placement</u></h3>
+                Simply because Bonus 2 was so fascinating, we create a new map of the same data, but layered with 2018 counts of
+                Blue collar and White collar workers:
+            </div>
+            <div class="col-lg-12">
+                <div><div class='tableauPlaceholder' id='viz1541406271717' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CQ&#47;CQ89G63WK&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;CQ89G63WK' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CQ&#47;CQ89G63WK&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1541406271717');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+                    <div><i><h4><br>
+                        <br><br>
+                        Immediately we see that areas with <b>more</b> White Collar workers (higher on the socioeconomic
+                        spectrum), or greener areas, have <b>more</b> bikesharing stations. To confirm the inverse, we explore the Blue
+                        Collar side:<br><br>
+                        <div><div class='tableauPlaceholder' id='viz1541406394038' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3G&#47;3GSPYDWN5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;3GSPYDWN5' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3G&#47;3GSPYDWN5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1541406394038');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+                        <br><br>
+                        Sure enough, redder areas, or those with <b>fewer</b> Blue Collar workers (i.e. manual laborers),
+                        have <b>more</b> bikesharing stations. Meaning bikesharing seems like a privilege made more
+                        accessible to White Collar workers than Blue Collar workers. 
+                        <b style="color: green">Again, this would be a great area for LA Bikeshare Metro to look into
+                        as making bikesharing more accesible for White Collar workers is only exacerbating the vicious cycle
+                        of socioeconomic inequality by potentially making it harder for Blue Collar workers to do their already 
+                        difficult jobs.</b><br><br>
+                    </h4></i></div>
+            </div>
+            <!-- Back to Top button-->
+            <div><br>
+                <a href="#wrapper"><button type="button" style="background-color: #5DB75C; border-color: green" class="btn btn-primary btn-lg btn-block">Back to Top</button></a><br><br>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <!-- <script src="../vendor/morrisjs/morris.min.js"></script> -->
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
